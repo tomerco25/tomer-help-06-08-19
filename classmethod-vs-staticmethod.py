@@ -13,6 +13,7 @@ class Person:
         print ("name in classmethod:",name)
         print ("year in classmethod:",year)
         print("------------------------------")
+        print("running __init__ :")
         return cls(name, date.today().year - year)
         # a static method to check if a Person is adult or not.
     @staticmethod
