@@ -19,10 +19,10 @@ class InputFormsCheck(unittest.TestCase):
         eleUserMessage = driver.find_element_by_id("user-message")
         eleUserMessage.clear()
         eleUserMessage.send_keys("Test Python")
-        time.sleep(3)
+        time.sleep(300)
 
         # Finding "Show Your Message" button element by css selector using both id and class name. And clicking it.
-        eleShowMsgBtn = driver.find_element_by_css_selector('#get-input > .btn')
+        eleShowMsgBtn = driver.find_element_by_css_selector('form#get-input > button')
         eleShowMsgBtn.click()
 
         # Checking whether the input text and output text are same using assertion.
