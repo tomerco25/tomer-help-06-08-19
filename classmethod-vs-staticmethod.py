@@ -7,6 +7,14 @@ class Person:
         print("self.age:", self.age)
         print("------------------------------")
         # a class method to create a Person object by birth year.
+    def double(self,double):
+            self.double= double
+            print("running function double in class person:")
+            print("self.double:", self.double)
+            self.double = double * 2
+            print("self.double*2:", self.double)
+            print("-------------------")
+            return self.double
     @classmethod
     def fromBirthYear(cls, name, year):
         print ("class name:",cls)
@@ -21,6 +29,7 @@ class Person:
         return age > 18
 print("person-1-instance:")
 person1 = Person('person-1-name', 21)
+person1.double(33)
 print("person-2-instance:")
 person2 = Person.fromBirthYear('person2-name', 1996)
 print ("instance outside class:",person1.age)
